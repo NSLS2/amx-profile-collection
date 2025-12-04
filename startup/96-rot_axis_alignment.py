@@ -249,11 +249,11 @@ class RotAlignHighMag(StandardProsilica):
                     ("proc1.o_offset", 255),
                     (
                         "roi4.min_xyz.min_x",
-                        self.roi1.min_xyz.min_x.get() + 302,
+                        self.roi1.min_xyz.min_x.get() + 202,
                     ),
                     ("roi4.min_xyz.min_y", 0),
                     ("roi4.size.x", 25),
-                    ("roi4.size.y", 1246),
+                    ("roi4.size.y", 1146),
                     ("stats4.nd_array_port", "PROC1")
                 ]
             )
