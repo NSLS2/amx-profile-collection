@@ -49,7 +49,7 @@ def home_pins():
 
 
 def do_all():
-    yield from screen4_centroid()
+    #yield from screen4_centroid()
     yield from rot_pin_align_with_robot()
     yield from beam_align_flux()
 
