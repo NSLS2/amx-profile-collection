@@ -99,8 +99,8 @@ class ShutterTranslation(Device):
 
 class BeamStop(Device):
     fx = Cpt(EpicsMotor, "-Ax:FX}Mtr")
-    fy = Cpt(EpicsMotor, "-Ax:FY}Mtr")
-
+    #fy = Cpt(EpicsMotor, "-Ax:FY}Mtr")
+    y = Cpt(EpicsMotor, "-Ax:Y}Mtr")
 
 class Attenuator(Device):
     a1 = Cpt(EpicsMotor, "-Ax:1}Mtr")

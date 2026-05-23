@@ -67,15 +67,18 @@ try:
 except ImportError:
     pass
 
-uri = "info.amx.nsls2.bnl.gov"
+#uri = "info.amx.nsls2.bnl.gov"
 # # Provide an endstation prefix, if needed, with a trailing "-"
-new_md = RedisJSONDict(redis.Redis(uri), prefix="")
-BEAMLINE_ID = 'amx'
+#new_md = RedisJSONDict(redis.Redis(uri), prefix="")
+#BEAMLINE_ID = 'amx'
 
 nslsii.configure_base(get_ipython().user_ns, 'amx', bec=True, pbar=False,
-                      publish_documents_with_kafka=True)
+                      publish_documents_with_kafka=True,
+                      redis_ssl=True,
+                      redis_port=6380,
+                      redis_url='xf17id1-amx-redis1.nsls2.bnl.gov')
 
-RE.md = new_md
+#RE.md = new_md
 
 # Disable plots via BestEffortCallback:
 bec.disable_plots()
