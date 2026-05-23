@@ -306,7 +306,7 @@ class RotAlignHighMag(StandardProsilica):
                     ("cv1.func_sets.func_set3", "User Function"),
                     ("cv1.inputs.input1", 42),
                     ("cv1.inputs.input2", 15),
-                    ("cv1.inputs.input3", 7),
+                    ("cv1.inputs.input3", 9),
                     ("cv1.inputs.input4", 5),
                 ]
             )
