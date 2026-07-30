@@ -193,7 +193,7 @@ def beam_align():
                     [cam_hi_ba],
                     axis,
                     0,
-                    0.4 * -(axis.delta_px.get() / abs(axis.delta_px.get())),
+                    0.2 * -(axis.delta_px.get() / abs(axis.delta_px.get())),
                     10,
                 )
                 scan_df = db[scan_uid].table()
