@@ -491,3 +491,4 @@ class Robot(Device):
 
 
 robrob = Robot('XF:17IDB-ES:AMX{EMBL}:', name='robrob')
+gripper_temp = EpicsSignalRO("XF:17IDB-ES:AMX{Wago:1}GripperTemp-I", name="gripper_temp")
