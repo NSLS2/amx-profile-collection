@@ -364,7 +364,7 @@ def rot_pin_align(
             * np.matrix(b.to_numpy()).transpose()
         )
         best_cam_pos = (rot_axis_pix - p[1]) / p[0]
-        return best_cam_pos
+        return float(best_cam_pos.item())
 
     # move pin to calculated rot axis with cam_y axis at omega_start
     best_cam_y = yield from tune_pin_inner(rot_aligner.gc_positioner.cam_y)

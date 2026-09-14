@@ -180,7 +180,7 @@ def beam_align():
                 * np.matrix(b.to_numpy()).transpose()
             )
             best = (goal - p[1]) / p[0]
-            return best
+            return float(best.item())
 
         for axis, signal, center in (
             kbt.hor,
