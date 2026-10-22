@@ -14,7 +14,7 @@ print(f"Loading {__file__}")
 
 alignment_pins = {
     "pin_1": {"general_puck_pos": 1, "start": (5760, 961, -216)},
-    "pin_7": {"general_puck_pos": 7, "start": (4720, 1060, 620)},
+    "pin_7": {"general_puck_pos": 7, "start": (4815, 915, 645)},
 }
 
 
