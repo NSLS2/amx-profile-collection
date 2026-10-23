@@ -61,5 +61,5 @@ class Keithley(Device):
     current = Cpt(EpicsSignalRO, "XF:17IDB-BI:AMX{Keith:1}readFloat")
     flux = Cpt(EpicsSignalRO, "XF:17IDA-OP:AMX{Mono:DCM-dflux}")
 
-
+eiger_wavelength = EpicsSignalRO("XF:17IDB-ES:AMX{Det:Eig9M}cam1:Wavelength_RBV", name="eiger_wavelength")
 keithley = Keithley("", name="keithley")

@@ -47,11 +47,17 @@ def home_pins():
 
     yield from bps.mv(gonio.o, 0)
 
+def check_eiger_wavelength():
+    scan_uid = yield from bp.count([eiger_wavelength])
+    wl = db[scan_uid].table()['eiger_wavelength'][1]
+    if wl > 0.93:
+        raise Exception(f'Eiger metadata wavelength setting of: {wl}, looks off')
 
 def do_all():
-    #yield from screen4_centroid()
+    yield from screen4_centroid()
     yield from rot_pin_align_with_robot()
     yield from beam_align_flux()
+    yield from check_eiger_wavelength()
 
 
 def test_home_pins(n):
